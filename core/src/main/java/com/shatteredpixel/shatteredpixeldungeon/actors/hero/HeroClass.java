@@ -221,7 +221,6 @@ public enum HeroClass {
 
 		(hero.belongings.weapon = staff).identify();
 		hero.belongings.weapon.activate(hero);
-		new CorpseDust().collect();
 
 		Dungeon.quickslot.setSlot(0, staff);
 
