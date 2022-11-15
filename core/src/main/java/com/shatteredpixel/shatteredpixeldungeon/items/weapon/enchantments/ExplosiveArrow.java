@@ -30,10 +30,15 @@ import com.watabou.utils.Random;
 public class ExplosiveArrow extends Weapon.Enchantment {
     @Override
     public int proc(Weapon weapon, Char attacker, Char defender, int damage) {
-        if (Random.Float() < 0.5) {
+        if (Random.Float() < 0.6) {
             new Bomb.MagicalBomb().explode(defender.pos);
         }
         return damage;
+    }
+
+    @Override
+    public boolean curse() {
+        return true;
     }
 
 
